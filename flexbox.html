@@ -40,6 +40,40 @@
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* flex-direction: column; */
+        /* gap: 30px; */
+      }
+
+      .el {
+        /* 
+          DEFAULTS:
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; */
+
+        /* No usamos la propiedad width, usamos flex-basis */
+        flex-basis: 200px; /* no es rigido, es mas una recomendacion al browser  */
+        /* flex-shrink: 1;  si no entran las cosas el browser las puede encoger */
+    
+        /* flex-grow: 1; permite al browser que crezca el elemento para ocupar el espacio restante 
+          si pongo flex-grow: 2, este elemento va a crecer el doble que el que tiene 1 y asi
+        */
+
+      }
+
+      .el--1 {
+        align-self: flex-start;
+      }
+
+      .el--5 {
+        align-self: stretch;
+      }
+
+      .el--6 {
+        order: -1;
       }
     </style>
   </head>
@@ -56,3 +90,17 @@
     </div>
   </body>
 </html>
+
+<!-- 
+  Para usar flexbox necesito setear display: flex en un container
+  elancho de los elementos va a ser el de su contenido
+  pero el alto de los elementos va a ser el de mayor alto en el container, salvo que use align-items: center / flex-start /
+  flex-end
+  en ese caso toma el tamanio del elemento y se alinea verticalmetne en el centro
+  con align-items: stretch agarran el height mas alto
+
+
+
+
+
+ -->
