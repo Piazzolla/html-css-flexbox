@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        /* height: 150px; */
+        height: 150px;
       }
       .el--4 {
         background-color: goldenrod;
@@ -52,6 +52,10 @@
         /* gap: 30px; este anda para column y row */
         column-gap: 20px;
         row-gap: 40px;
+
+
+        /* TEMP */
+        display: none;
       }
 
       .el--8 {
@@ -66,22 +70,43 @@
         /* grid-column: 1 / -1; si uso -1 va desde la columna especificada hasta el final 
         para ver los numeros negativos tengo que hacer un inspect del grid y activar grid
         con el boton en el dom y ahi aparecen los numeros marcados*/
-        grid-row: 2 / 3;
+        grid-row: 1 / span 2;
       }
 
       .container--2 {
         /* STARTER */
-        display: none;
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
         margin: 100px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows:  250px 100px;
+
+        /* Aligning tracks inside container */
+        justify-content: center;
+        align-content: center;
+        gap: 50px;
+
+
+        /* Aligning items INSIDE cells */
+        align-items: center;
+        justify-items: stretch;
+
+
       }
+
+      .el--3 {
+        align-self: end;
+        justify-self: end;
+      }
+      
     </style>
   </head>
   <body>
